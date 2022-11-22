@@ -1,0 +1,306 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap");
+
+$font1: "Orbitron", sans-serif;
+$black: #000000;
+$white: #ffffff;
+$gray: #e5e5e5;
+$blue: #14213d;
+$orange: #fca311;
+
+.container {
+  position: fixed;
+  width: 100%;
+  max-width: 41rem;
+  height: 7rem;
+  bottom: 0%;
+  z-index: 10;
+}
+.navigation {
+  background-color: #e5e5e5;
+  height: 7rem;
+  width: 100%;
+}
+.navigation ul {
+  position: relative;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 0%;
+  padding: 0%;
+  width: 100%;
+  height: 100%;
+}
+.navigation ul li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  width: 20%;
+  height: 7rem;
+  z-index: 1;
+}
+.navigation ul li a {
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 5s;
+  // margin: 0 .6rem;
+}
+.navigation ul li a .icon {
+  display: block;
+  line-height: 7.5rem;
+  font-size: 1.5em;
+  text-align: center;
+  transition: all 1s;
+  font-size: 3rem;
+}
+.navigation ul li.active a .icon {
+  transform: translateY(-3.2rem);
+}
+.navigation ul li a .text {
+  position: absolute;
+  transition: 1.2s;
+  opacity: 0;
+  transform: translateY(20px);
+  font-size: 1.6rem;
+}
+.navigation ul li.active a .text {
+  opacity: 1;
+  transform: translateY(10px);
+}
+.list {
+  z-index: 9;
+}
+.circle::after {
+  content: "";
+  position: absolute;
+  right: -2rem;
+  top: 50%;
+  width: 2rem;
+  height: 2rem;
+  background: transparent;
+  border-top-left-radius: 2rem;
+  box-shadow: 0px -1rem 0 0 $black;
+  transition: 1.5s;
+  opacity: 1;
+}
+.circle::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -2rem;
+  width: 2rem;
+  height: 2rem;
+  background: transparent;
+  border-top-right-radius: 2rem;
+  box-shadow: 0px -1rem 0 0 $black;
+  transition: 1.5s;
+  opacity: 1;
+}
+
+.circle {
+  position: absolute;
+  top: -50%;
+  left: 1%;
+  width: 20%;
+  max-width: 7rem;
+  height: calc(20vw);
+  max-height: 7rem;
+  background-color: $orange;
+  border-radius: 50%;
+  border: 6px solid black;
+  transition: 1.5s;
+  z-index: 0;
+}
+// .navigation ul li:nth-child(1).active ~ .circle {
+//     transform: translateX(calc(0% - 1px));
+// }
+// .navigation ul li:nth-child(2).active ~ .circle {
+//     transform: translateX(calc(100% + 3px - 2vw));
+// }
+// .navigation ul li:nth-child(3).active ~ .circle {
+//     transform: translateX(calc(7rem * 2 + 15%));
+// }
+// .navigation ul li:nth-child(4).active ~ .circle {
+//     transform: translateX(calc(7rem * 3 + 22.5%));
+// }
+// .navigation ul li:nth-child(5).active ~ .circle {
+//     transform: translateX(calc(7rem * 4 + 30%));
+// }
+@media (max-width: 420px) {
+  .container {
+    max-width: 42rem;
+  }
+  .navigation ul li:nth-child(1).active ~ .circle {
+    transform: translateX(calc(3%));
+  }
+  .navigation ul li:nth-child(2).active ~ .circle {
+    transform: translateX(calc(122%));
+  }
+  .navigation ul li:nth-child(3).active ~ .circle {
+    transform: translateX(239%);
+  }
+  .navigation ul li:nth-child(4).active ~ .circle {
+    transform: translateX(355%);
+  }
+  .navigation ul li:nth-child(5).active ~ .circle {
+    transform: translateX(476%);
+  }
+}
+@media (max-width: 410px) {
+  .navigation ul li:nth-child(1).active ~ .circle {
+    transform: translateX(calc(0% + 1px));
+  }
+  .navigation ul li:nth-child(2).active ~ .circle {
+    transform: translateX(calc(115.8% + 2px));
+  }
+  .navigation ul li:nth-child(3).active ~ .circle {
+    transform: translateX(234%);
+  }
+  .navigation ul li:nth-child(4).active ~ .circle {
+    transform: translateX(350.2%);
+  }
+  .navigation ul li:nth-child(5).active ~ .circle {
+    transform: translateX(469%);
+  }
+}
+@media (max-width: 400px) {
+  .navigation ul li:nth-child(1).active ~ .circle {
+    transform: translateX(calc(0% - 2px));
+  }
+  .navigation ul li:nth-child(2).active ~ .circle {
+    transform: translateX(calc(112%));
+  }
+  .navigation ul li:nth-child(3).active ~ .circle {
+    transform: translateX(226%);
+  }
+  .navigation ul li:nth-child(4).active ~ .circle {
+    transform: translateX(340%);
+  }
+  .navigation ul li:nth-child(5).active ~ .circle {
+    transform: translateX(455%);
+  }
+}
+@media (max-width: 395px) {
+  .navigation ul li:nth-child(1).active ~ .circle {
+    transform: translateX(calc(0% - 2px));
+  }
+  .navigation ul li:nth-child(2).active ~ .circle {
+    transform: translateX(calc(112% - 1px));
+  }
+  .navigation ul li:nth-child(3).active ~ .circle {
+    transform: translateX(223%);
+  }
+  .navigation ul li:nth-child(4).active ~ .circle {
+    transform: translateX(335%);
+  }
+  .navigation ul li:nth-child(5).active ~ .circle {
+    transform: translateX(446%);
+  }
+}
+@media (max-width: 390px) {
+  .navigation ul li:nth-child(1).active ~ .circle {
+    transform: translateX(calc(0% - 4px));
+  }
+  .navigation ul li:nth-child(2).active ~ .circle {
+    transform: translateX(calc(112% - 10px));
+  }
+  .navigation ul li:nth-child(3).active ~ .circle {
+    transform: translateX(223%);
+  }
+  .navigation ul li:nth-child(4).active ~ .circle {
+    transform: translateX(335%);
+  }
+  .navigation ul li:nth-child(5).active ~ .circle {
+    transform: translateX(calc(446% - 5px));
+  }
+}
+@media (max-width: 385px) {
+  .navigation ul li:nth-child(1).active ~ .circle {
+    transform: translateX(calc(0% - 2px));
+  }
+  .navigation ul li:nth-child(2).active ~ .circle {
+    transform: translateX(calc(112% - 5px));
+  }
+  .navigation ul li:nth-child(3).active ~ .circle {
+    transform: translateX(calc(223% - 6px));
+  }
+  .navigation ul li:nth-child(4).active ~ .circle {
+    transform: translateX(calc(335% - 7px));
+  }
+  .navigation ul li:nth-child(5).active ~ .circle {
+    transform: translateX(calc(446% - 8px));
+  }
+}
+@media (max-width: 380px) {
+  .navigation ul li:nth-child(1).active ~ .circle {
+    transform: translateX(calc(0% - 3px));
+  }
+  .navigation ul li:nth-child(2).active ~ .circle {
+    transform: translateX(calc(112% - 6.5px));
+  }
+  .navigation ul li:nth-child(3).active ~ .circle {
+    transform: translateX(calc(223% - 7.5px));
+  }
+  .navigation ul li:nth-child(4).active ~ .circle {
+    transform: translateX(calc(332% - 9px));
+  }
+  .navigation ul li:nth-child(5).active ~ .circle {
+    transform: translateX(calc(443% - 10px));
+  }
+}
+@media (max-width: 375px) {
+  .navigation ul li:nth-child(1).active ~ .circle {
+    transform: translateX(calc(0% - 4px));
+  }
+  .navigation ul li:nth-child(2).active ~ .circle {
+    transform: translateX(calc(110% - 6.5px));
+  }
+  .navigation ul li:nth-child(3).active ~ .circle {
+    transform: translateX(calc(218% - 7.5px));
+  }
+  .navigation ul li:nth-child(4).active ~ .circle {
+    transform: translateX(calc(326% - 9px));
+  }
+  .navigation ul li:nth-child(5).active ~ .circle {
+    transform: translateX(calc(438% - 10px));
+  }
+}
+@media (max-width: 370px) {
+  .navigation ul li:nth-child(1).active ~ .circle {
+    transform: translateX(calc(0% - 4px));
+  }
+  .navigation ul li:nth-child(2).active ~ .circle {
+    transform: translateX(calc(109% - 6.5px));
+  }
+  .navigation ul li:nth-child(3).active ~ .circle {
+    transform: translateX(calc(216% - 7.5px));
+  }
+  .navigation ul li:nth-child(4).active ~ .circle {
+    transform: translateX(calc(324% - 9px));
+  }
+  .navigation ul li:nth-child(5).active ~ .circle {
+    transform: translateX(calc(432% - 10px));
+  }
+}
+@media (max-width: 365px) {
+  .navigation ul li:nth-child(1).active ~ .circle {
+    transform: translateX(calc(0% - 5px));
+  }
+  .navigation ul li:nth-child(2).active ~ .circle {
+    transform: translateX(calc(98%));
+  }
+  .navigation ul li:nth-child(3).active ~ .circle {
+    transform: translateX(calc(210% - 7.5px));
+  }
+  .navigation ul li:nth-child(4).active ~ .circle {
+    transform: translateX(calc(316% - 9px));
+  }
+  .navigation ul li:nth-child(5).active ~ .circle {
+    transform: translateX(calc(424% - 10px));
+  }
+}

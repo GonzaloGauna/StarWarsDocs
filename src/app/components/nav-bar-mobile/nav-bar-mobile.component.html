@@ -1,0 +1,39 @@
+<div class="container">
+    <div class="navigation">
+        <ul>
+            <li class="list active" (click)="activeLink(home)" #home>
+                <a href="#">
+                    <span class="icon activeDef"><i class='bx bx-home'></i></span>
+                    <span class="text">Home</span>
+                </a>
+            </li>
+            <li class="list" (click)="activeLink(characters)" #characters>
+                <a href="#">
+                    <span class="icon"><i class='bx bx-body'></i></span>
+                    <span class="text">Characters</span>
+                </a>
+            </li>
+            <li class="list" (click)="activeLink(miscellany)" #miscellany>
+                <a href="#">
+                    <span class="icon"><i class='bx bx-planet'></i></span>
+                    <span class="text">Miscellany</span>
+                </a>
+            </li>
+            <li class="list" (click)="activeLink(films)" #films>
+                <a href="#">
+                    <span class="icon"><i class='bx bx-camera-movie'></i></span>
+                    <span class="text">Films</span>
+                </a>
+            </li>
+            <li class="list" (click)="activeLink(author)" #author>
+                <a href="#">
+                    <span class="icon"><i class='bx bx-show-alt'></i></span>
+                    <span class="text">Author</span>
+                </a>
+            </li>
+            <div class="circle">
+                
+            </div>
+        </ul>
+    </div>
+</div>
